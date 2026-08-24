@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sayfam">
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <i class="fa-solid fa-clock sidebar-icons"></i>
+          <h3>Task Pilot</h3>
+        </div>
+
+        <div class="sidebar-middle">
+          <div class="sidebar-item">
+            <i class="fa-solid fa-house sidebar-icons"></i>
+            <span>Home</span>
+          </div>
+          <div class="sidebar-item">
+            <i class="fa-solid fa-chart-column sidebar-icons"></i>
+            <span>Tasks</span>
+          </div>
+
+          <div class="sidebar-item">
+            <i class="fa-solid fa-briefcase sidebar-icons"></i>
+            <span>Projects</span>
+          </div>
+          <div class="sidebar-item">
+            <i class="fa-solid fa-calendar sidebar-icons"></i>
+            <span>Calendar</span>
+          </div>
+
+          <div class="sidebar-item">
+            <i class="fa-solid fa-clipboard-check sidebar-icons"></i>
+            <span>Competed Task</span>
+          </div>
+
+          <div class="sidebar-item">
+            <i class="fa-solid fa-bullseye sidebar-icons"></i>
+            <span>Progress</span>
+          </div>
+
+          <div class="sidebar-item">
+            <i class="fa-solid fa-user-group sidebar-icons"></i>
+            <span>Partners</span>
+          </div>
+        </div>
+        <div class="sidebar-bottom">
+          <div class="sidebar-actions">
+            <div class="notification-item">
+              <i class="fa-solid fa-bell sidebar-icons"></i>
+              <span>Notifications</span>
+            </div>
+
+            <div class="settings-item">
+              <i class="fa-solid fa-gear sidebar-icons"></i>
+              <span>Settings</span>
+            </div>
+          </div>
+          <div class="sidebar-profile">
+            <span>Ahsen KAS</span>
+            <img src="images/cv_foto.jpeg" class="sidebar-img" />
+          </div>
+        </div>
+      </div>
+
+      <div class="main-contair">
+        <div class="navbar">
+          <div class="nav-left">
+            <div class="navbar-time">
+              <i class="fa-solid fa-sun"></i>
+              <span id="current-time"></span>
+            </div>
+          </div>
+          <div class="nav-right">
+            <div class="arama">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="Search anything" />
+            </div>
+            <i class="fa-solid fa-sun"></i>
+          </div>
+        </div>
+        <div class="main">
+          <div class="karsilama">
+            <div class="karsilama-left">
+              <h1>Good Morning, Ahsen</h1>
+              <span
+                >Lets's make today amazing. Yoy have 8 tasks and 3 events</span
+              >
+              <button class="karsilama-btn">
+                Start Planning
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <div class="karsilama-right">
+              <div class="focus-top">
+                <h5>Focus Zone</h5>
+                <span class="focus">Deep work session</span>
+              </div>
+              <div class="timer-area">
+                <div class="timer-circle">
+                  <span>25:00</span>
+                  <span>Time Left</span>
+                </div>
+
+                <button class="timer">Start timer</button>
+              </div>
+              <div class="focus-bottom">
+                <h6>Todays Goal</h6>
+                <span>Completed</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gorevler">
+            <div class="gorevler-islemler">
+              <div class="gorevler-baslik">
+                <h5>What do you want to do?</h5>
+              </div>
+
+              <div class="gorevler-kartlari">
+                <div class="kart">
+                  <div class="icon-style-ortak add-task-bg">
+                    <i class="fa-regular fa-circle-check add-task-icon"></i>
+                  </div>
+                  <h6>Add task</h6>
+                  <span class="gorevler-kartlari-aciklama">
+                    Quickly capture a new task
+                  </span>
+                </div>
+
+                <div class="kart">
+                  <div class="icon-style-ortak new-project-bg">
+                    <i class="fa-regular fa-folder-closed new-project-icon"></i>
+                  </div>
+                  <h6>New Project</h6>
+                  <span class="gorevler-kartlari-aciklama">
+                    Start working on something
+                  </span>
+                </div>
+
+                <div class="kart">
+                  <div class="icon-style-ortak schedule-bg">
+                    <i class="fa-regular fa-calendar schedule-icon"></i>
+                  </div>
+                  <h6>Schedule</h6>
+                  <span class="gorevler-kartlari-aciklama">
+                    Plan your calendar
+                  </span>
+                </div>
+
+                <div class="kart">
+                  <div class="icon-style-ortak remind-bg">
+                    <i class="fa-regular fa-bell remind-me-icon"></i>
+                  </div>
+                  <h6>Remind Me</h6>
+                  <span class="gorevler-kartlari-aciklama">
+                    Set a smart reminder
+                  </span>
+                </div>
+
+                <div class="kart">
+                  <div class="icon-style-ortak write-note-bg">
+                    <i class="fa-regular fa-file-lines write-not-icon"></i>
+                  </div>
+                  <h6>Write Note</h6>
+                  <span class="gorevler-kartlari-aciklama">
+                    Write Down your thoughts
+                  </span>
+                </div>
+
+                <div class="add-kart">
+                  <i class="fa-regular fa-plus customize-icon"></i>
+                  <button class="customize-btn">Customize</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="aktif-projeler"></div>
+          </div>
+
+          <div class="kartlar"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

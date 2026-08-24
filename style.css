@@ -1,0 +1,406 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.sayfam {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid navy;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.sidebar-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  gap: 25px;
+}
+
+.sidebar-img {
+  height: 50%;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.sidebar-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.notification-item,
+.settings-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 120px;
+}
+
+.sidebar-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  width: 100%;
+}
+
+.sidebar-icons {
+  display: inline-flex;
+  width: 25px;
+  justify-content: center;
+}
+
+/* MAIN AREA */
+
+.main-contair {
+  flex: 1;
+  height: 100%;
+  background-color: rgb(226, 226, 227);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* NAVBAR */
+
+.navbar {
+  height: 7%;
+  min-height: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 2px solid palevioletred;
+  padding: 5px 15px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.arama {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.arama input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/*MAİN*/
+
+.main {
+  height: 93%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/*karsilama*/
+
+.karsilama {
+  height: 20%;
+  min-height: 0;
+  display: flex;
+  gap: 2%;
+  margin: 5px 15px;
+}
+
+.karsilama-left {
+  width: 70%;
+  height: 98%;
+  background-image: url("images/karsilama.jpg");
+  background-size: cover;
+  background-position: center;
+  border: 2px solid navy;
+  display: flex;
+  flex-direction: column;
+}
+
+.karsilama-btn {
+  width: 26%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 15px;
+  border: none;
+  background-color: rgb(195, 111, 195);
+  color: white;
+  border-radius: 15px;
+}
+
+/* focus zone */
+
+.karsilama-right {
+  width: 30%;
+  height: 98%;
+  border: 2px solid navy;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.focus-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-left: 8px;
+  margin-top: 3px;
+}
+
+.focus-top h5,
+.focus-top span {
+  margin: 0;
+}
+
+/* timer */
+
+.timer-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  flex: 1;
+  min-height: 0;
+}
+
+.timer-circle {
+  width: 65px;
+  height: 65px;
+  border: 3px solid rgb(195, 111, 195);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.timer-circle span {
+  font-size: 11px;
+}
+
+.timer {
+  border: none;
+  padding: 4px 9px;
+  color: white;
+  background-color: rgb(195, 111, 195);
+  border-radius: 7px;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+.timer-icon {
+  color: white;
+}
+
+/* focus bottom */
+
+.focus-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-left: 8px;
+  margin-bottom: 3px;
+}
+
+.focus-bottom h6,
+.focus-bottom span {
+  margin: 0;
+}
+
+/*gorevler*/
+
+.gorevler {
+  height: 13%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 5px 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gorevler h5 {
+  margin: 5px 10px;
+  font-size: medium;
+}
+
+/*gorevler kartlari*/
+
+.gorevler-kartlari {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.kart {
+  border: 2px solid rgb(240, 240, 240);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2px;
+  padding: 2px;
+  width: 250px;
+  height: calc(100% - 4px);
+  flex-shrink: 1;
+  overflow: hidden;
+}
+
+.kart h6 {
+  margin: 2px;
+  font-size: 11px;
+}
+
+.gorevler-kartlari-aciklama {
+  width: 100%;
+  text-align: center;
+  color: rgb(169, 169, 169);
+  font-size: 9px;
+}
+
+/* add kart */
+
+.add-kart {
+  border: 2px dashed rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2px;
+  padding: 2px;
+  width: 250px;
+  height: calc(100% - 4px);
+  flex-shrink: 1;
+}
+
+.customize-btn {
+  border: none;
+  background: none;
+  color: rgb(169, 169, 169);
+  font-size: 10px;
+}
+
+.customize-icon {
+  color: rgb(169, 169, 169);
+}
+
+/*gorevler ikonlari*/
+
+.icon-style-ortak {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.add-task-icon {
+  color: purple;
+}
+
+.add-task-bg {
+  background-color: #ede9fe;
+}
+
+.new-project-bg {
+  background-color: #dbeafe;
+}
+
+.new-project-icon {
+  color: blue;
+}
+
+.schedule-bg {
+  background-color: #dcfce7;
+}
+
+.schedule-icon {
+  color: green;
+}
+
+.remind-bg {
+  background-color: #fef3c7;
+}
+
+.remind-me-icon {
+  color: orange;
+}
+
+.write-note-bg {
+  background-color: #fce7f3;
+}
+
+.write-not-icon {
+  color: red;
+}
+
+/*main aktif-projeler*/
+
+.aktif-projeler {
+  height: 30%;
+  min-height: 0;
+  margin: 5px 15px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/*main diger-bolum*/
+
+.diger-bolum {
+  height: 30%;
+  min-height: 0;
+  margin: 5px 15px;
+  background-color: white;
+  border-radius: 10px;
+}
