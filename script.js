@@ -5,6 +5,16 @@ const minute = now.getMinutes();
 
 document.querySelector("#current-time").innerHTML = `${hour}:${minute}`;
 
+const date = now.toLocaleDateString("en-US", {
+  month: "long",
+  day: "numeric",
+  weekday: "long",
+});
+
+document.querySelector("#current-day").innerHTML = date;
+
+document.querySelector("#current-day").innerHTML = day;
+
 const timerDisplay = document.querySelector("#timer-display");
 const timerButton = document.querySelector(".timer");
 

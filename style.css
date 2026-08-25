@@ -281,7 +281,9 @@ body {
   align-items: center;
 }
 
-.gorevler h5 {
+.gorevler h5,
+.todays-schedule-top h5,
+.todays-plan-top h5 {
   margin: 5px 10px;
   font-size: medium;
 }
@@ -338,7 +340,8 @@ body {
 
 /* CUSTOMIZE */
 
-.customize-btn {
+.customize-btn,
+.view-full-calendar-btn {
   border: none;
   background: none;
   color: rgb(169, 169, 169);
@@ -532,7 +535,7 @@ body {
   border-radius: 10px;
 }
 
-/* ANA KARTLAR */
+/* Main bottom*/
 
 .main-bottom {
   height: 40%;
@@ -540,4 +543,62 @@ body {
   margin: 5px 15px;
   background-color: white;
   border-radius: 10px;
+}
+
+.main-bottom {
+  display: flex;
+  gap: 10px;
+}
+
+.main-bottom-right {
+  flex: 1;
+  border: 1px solid blueviolet;
+}
+.todays-schedule-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 15px;
+}
+
+#current-day {
+  font-size: smaller;
+}
+
+/*Main bottom left*/
+
+.main-bottom-left {
+  width: 60%;
+  border: 1px solid rgb(221, 221, 221);
+}
+
+.todays-plan-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.todays-plan-top-left {
+  display: flex;
+  flex-direction: row;
+}
+
+.task-btn {
+  border: none;
+  color: purple;
+  background-color: #ede9fe;
+  border-radius: 10px;
+  font-size: x-small;
+}
+
+.sort-btn {
+  border: none;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  font-size: x-small;
+  border: 1px solid rgb(221, 221, 221);
 }
