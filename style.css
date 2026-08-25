@@ -127,20 +127,18 @@ body {
   background: transparent;
 }
 
-/*MAİN*/
+/* MAIN */
 
 .main {
   height: 93%;
-  min-height: 0;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
-/*karsilama*/
+/* KARŞILAMA */
 
 .karsilama {
-  height: 20%;
+  height: 30%;
   min-height: 0;
   display: flex;
   gap: 2%;
@@ -171,7 +169,7 @@ body {
   border-radius: 15px;
 }
 
-/* focus zone */
+/* FOCUS ZONE */
 
 .karsilama-right {
   width: 30%;
@@ -195,7 +193,7 @@ body {
   margin: 0;
 }
 
-/* timer */
+/* TIMER */
 
 .timer-area {
   display: flex;
@@ -237,7 +235,7 @@ body {
   color: white;
 }
 
-/* focus bottom */
+/* FOCUS BOTTOM */
 
 .focus-bottom {
   display: flex;
@@ -252,17 +250,35 @@ body {
   margin: 0;
 }
 
-/*gorevler*/
+/* GÖREVLER */
 
 .gorevler {
-  height: 13%;
+  height: 30%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  margin: 5px 15px;
+  overflow: hidden;
+}
+
+/* GÖREVLER İŞLEMLER */
+
+.gorevler-islemler {
+  height: 48%;
   min-height: 0;
   display: flex;
   flex-direction: column;
   background-color: white;
-  margin: 5px 15px;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.gorevler-baslik {
+  height: 25%;
+  min-height: 0;
+  display: flex;
+  align-items: center;
 }
 
 .gorevler h5 {
@@ -270,29 +286,42 @@ body {
   font-size: medium;
 }
 
-/*gorevler kartlari*/
+/* GÖREVLER KARTLARI */
 
 .gorevler-kartlari {
-  flex: 1;
+  height: 75%;
   min-height: 0;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  gap: 5px;
+  padding: 2px;
+  border: 2px solid brown;
 }
 
-.kart {
-  border: 2px solid rgb(240, 240, 240);
+/* NORMAL KART + CUSTOMIZE KART */
+
+.kart,
+.add-kart {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  margin: 2px;
   padding: 2px;
-  width: 250px;
-  height: calc(100% - 4px);
-  flex-shrink: 1;
   overflow: hidden;
+  border: 2px solid brown;
+}
+
+.kart {
+  border: 2px solid rgb(240, 240, 240);
+  border: 2px solid brown;
+}
+
+.add-kart {
+  border: 2px dashed rgb(240, 240, 240);
 }
 
 .kart h6 {
@@ -307,20 +336,7 @@ body {
   font-size: 9px;
 }
 
-/* add kart */
-
-.add-kart {
-  border: 2px dashed rgb(240, 240, 240);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  margin: 2px;
-  padding: 2px;
-  width: 250px;
-  height: calc(100% - 4px);
-  flex-shrink: 1;
-}
+/* CUSTOMIZE */
 
 .customize-btn {
   border: none;
@@ -333,7 +349,7 @@ body {
   color: rgb(169, 169, 169);
 }
 
-/*gorevler ikonlari*/
+/* GÖREVLER İKONLARI */
 
 .icon-style-ortak {
   display: flex;
@@ -385,9 +401,130 @@ body {
   color: red;
 }
 
-/*main aktif-projeler*/
+/* AKTİF PROJELER */
 
 .aktif-projeler {
+  height: 48%;
+  margin-top: 10px;
+  min-height: 0;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.aktif_projeler-top {
+  height: 25%;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aktif-projeler-kartlari {
+  height: 75%;
+  min-height: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding: 2px;
+  border: 2px solid brown;
+}
+.view-all-projects-btn {
+  border: none;
+  background-color: white;
+  color: purple;
+  font-size: x-small;
+}
+
+.add-kart {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2px;
+  overflow: hidden;
+}
+
+.proje {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2px;
+  overflow: hidden;
+  border: 2px solid brown;
+}
+
+.proje-img {
+  width: 100%;
+  height: 30%;
+  display: block;
+  border: 2px solid brown;
+}
+
+.proje h6 {
+  border: 2px solid brown;
+  margin-top: 2%;
+}
+.proje-progress {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: auto;
+  margin-bottom: 5px;
+  flex-shrink: 0;
+  transform: translateY(-15px);
+}
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 5px;
+}
+
+.progress-dolu-mobile {
+  width: 75%;
+  height: 100%;
+  background-color: rgb(195, 111, 195);
+  border-radius: 5px;
+}
+
+.progress-dolu-commerce {
+  width: 45%;
+  height: 100%;
+  background-color: #dcfce7;
+  border-radius: 5px;
+}
+.progress-dolu-marketing {
+  width: 60%;
+  height: 100%;
+  background-color: orange;
+  border-radius: 5px;
+}
+
+.progress-dolu-brand {
+  width: 30%;
+  height: 100%;
+  background-color: navy;
+  border-radius: 5px;
+}
+.proje-progress span {
+  font-size: 9px;
+}
+
+/* DİĞER BÖLÜM */
+
+.diger-bolum {
   height: 30%;
   min-height: 0;
   margin: 5px 15px;
@@ -395,10 +532,10 @@ body {
   border-radius: 10px;
 }
 
-/*main diger-bolum*/
+/* ANA KARTLAR */
 
-.diger-bolum {
-  height: 30%;
+.main-bottom {
+  height: 40%;
   min-height: 0;
   margin: 5px 15px;
   background-color: white;
