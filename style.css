@@ -7,6 +7,11 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: rgb(226, 226, 227);
 }
 
 .sayfam {
@@ -18,139 +23,84 @@ body {
 /* SIDEBAR */
 
 .sidebar {
-  width: 15%;
+  width: 65px;
   height: 100%;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: 0.3s;
-}
-
-#sidebar-toggle {
-  border: none;
-  background: none;
-  font-size: 18px;
-  cursor: pointer;
-  margin: 10px;
-  align-self: flex-end;
+  background-color: white;
 }
 
 .sidebar-header {
-  width: 100%;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  padding: 20px 0;
 }
 
 .sidebar-middle {
-  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 25px;
-  margin-top: 30px;
+  padding-top: 20px;
 }
 
 .sidebar-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 8px 15px;
+  justify-content: center;
 }
 
 .sidebar-bottom {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: auto;
   gap: 25px;
+  padding-bottom: 15px;
 }
 
 .sidebar-actions {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  gap: 20px;
 }
 
 .notification-item,
 .settings-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
 }
 
 .sidebar-profile {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
-  width: 100%;
+  align-items: center;
+}
+
+.sidebar-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .sidebar-icons {
   display: inline-flex;
   width: 25px;
   justify-content: center;
-  flex-shrink: 0;
+  font-size: 16px;
 }
-
-.sidebar-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-/* SIDEBAR-CLOSED*/
-.sidebar.closed {
-  width: 6%;
-}
-
-.sidebar.closed .sidebar-header h3,
-.sidebar.closed .sidebar-item span,
-.sidebar.closed .notification-item span,
-.sidebar.closed .settings-item span,
-.sidebar.closed .sidebar-profile span {
-  display: none;
-}
-
-.sidebar.closed .sidebar-header {
-  justify-content: center;
-}
-
-.sidebar.closed .sidebar-item {
-  justify-content: center;
-  padding: 8px 0;
-}
-
-.sidebar.closed .notification-item,
-.sidebar.closed .settings-item {
-  justify-content: center;
-}
-
-.sidebar.closed .sidebar-profile {
-  justify-content: center;
-}
-
-.sidebar.closed .sidebar-middle {
-  align-items: center;
-}
-
-.sidebar.closed .sidebar-actions {
-  align-items: center;
-}
-
-.sidebar.closed #sidebar-toggle {
-  align-self: center;
-}
-
 
 /* MAIN AREA */
 
 .main-contair {
   flex: 1;
+  min-width: 0;
   height: 100%;
   background-color: rgb(226, 226, 227);
   display: flex;
@@ -161,53 +111,56 @@ body {
 /* NAVBAR */
 
 .navbar {
-  height: 6%;
-  min-height: 0;
+  height: 7%;
+  min-height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-   padding: 5px 15px;
+  padding: 5px 20px;
+  background-color: transparent;
 }
 
-.time-icon {
-  display: none;
-}
-.time-icon {
-  display: none;
-}
-
-.time-icon:first-child {
-  color: lightblue;
+.navbar-time {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
 }
 
-.time-icon:nth-child(2) {
+.navbar-time i {
   color: orange;
-}
-
-.time-icon:nth-child(3) {
-  color: purple;
 }
 
 .nav-right {
   display: flex;
-  gap: 15px;
   align-items: center;
+  gap: 15px;
 }
 
 .arama {
+  width: 280px;
+  height: 35px;
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 5px 10px;
+  padding: 5px 12px;
   background-color: white;
-  border-radius: 12px;
+  border-radius: 20px;
+  border: 1px solid rgb(235, 235, 235);
+}
+
+.arama i {
+  color: rgb(130, 130, 130);
+  font-size: 13px;
 }
 
 .arama input {
+  width: 100%;
   border: none;
   outline: none;
   background: transparent;
+  font-size: 12px;
 }
 
 /* MAIN */
@@ -216,12 +169,13 @@ body {
   height: 93%;
   display: flex;
   flex-direction: column;
+  min-height: 0;
 }
 
 /* KARŞILAMA */
 
 .karsilama {
-  height: 30%;
+  height: 27%;
   min-height: 0;
   display: flex;
   gap: 2%;
@@ -230,43 +184,59 @@ body {
 
 .karsilama-left {
   width: 70%;
-  height: 98%;
+  height: 100%;
   background-image: url("images/karsilama.jpg");
   background-size: cover;
   background-position: center;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.karsilama-left h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.karsilama-left p {
+  margin: 15px 0;
+  font-size: 13px;
 }
 
 .karsilama-btn {
-  width: 26%;
-  height: 20%;
+  width: 25%;
+  min-width: 180px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 15px;
   border: none;
   background-color: rgb(195, 111, 195);
   color: white;
-  border-radius: 15px;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
 /* FOCUS ZONE */
 
 .karsilama-right {
   width: 30%;
-  height: 98%;
+  height: 100%;
+  background-color: white;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  padding: 15px;
 }
 
 .focus-top {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  margin-left: 8px;
-  margin-top: 3px;
+  gap: 3px;
+  margin: 0;
 }
 
 .focus-top h5,
@@ -274,56 +244,62 @@ body {
   margin: 0;
 }
 
-/* TIMER */
+.focus-top h5 {
+  font-size: 15px;
+}
+
+.focus-top span {
+  font-size: 11px;
+  color: rgb(130, 130, 130);
+}
 
 .timer-area {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  gap: 10px;
   flex: 1;
   min-height: 0;
 }
 
 .timer-circle {
-  width: 65px;
-  height: 65px;
-  border: 3px solid rgb(195, 111, 195);
+  width: 105px;
+  height: 105px;
+  border: 4px solid rgb(195, 111, 195);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
 }
 
 .timer-circle span {
-  font-size: 11px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.timer-circle small {
+  font-size: 9px;
+  color: rgb(120, 120, 120);
 }
 
 .timer {
   border: none;
-  padding: 4px 9px;
+  padding: 7px 14px;
   color: white;
   background-color: rgb(195, 111, 195);
-  border-radius: 7px;
+  border-radius: 8px;
   font-size: 10px;
-  flex-shrink: 0;
+  cursor: pointer;
 }
-
-.timer-icon {
-  color: white;
-}
-
-/* FOCUS BOTTOM */
 
 .focus-bottom {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  margin-left: 8px;
-  margin-bottom: 3px;
+  gap: 4px;
+  padding-top: 10px;
+  border-top: 1px solid rgb(235, 235, 235);
 }
 
 .focus-bottom h6,
@@ -331,27 +307,48 @@ body {
   margin: 0;
 }
 
-/* GÖREVLER */
+.focus-bottom h6 {
+  font-size: 11px;
+}
+
+.focus-bottom span {
+  font-size: 10px;
+  color: rgb(120, 120, 120);
+}
+
+.goal-progress {
+  width: 100%;
+  height: 5px;
+  background-color: rgb(235, 235, 235);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 3px;
+}
+
+.goal-progress-dolu {
+  width: 66%;
+  height: 100%;
+  background-color: rgb(195, 111, 195);
+}
+
+/* AKTİVİTELER */
 
 .gorevler {
-  height: 30%;
+  height: 23%;
   min-height: 0;
   display: flex;
   flex-direction: column;
-  background-color: transparent;
   margin: 5px 15px;
   overflow: hidden;
 }
 
-/* GÖREVLER İŞLEMLER */
-
 .gorevler-islemler {
-  height: 48%;
+  height: 100%;
   min-height: 0;
   display: flex;
   flex-direction: column;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
 }
 
@@ -360,51 +357,41 @@ body {
   min-height: 0;
   display: flex;
   align-items: center;
+  padding-left: 5px;
 }
 
-.gorevler h5,
-.todays-schedule-top h5,
-.todays-plan-top h5 {
+.gorevler h5 {
   margin: 5px 10px;
-  font-size: medium;
+  font-size: 15px;
 }
-
-/* GÖREVLER KARTLARI */
 
 .gorevler-kartlari {
   height: 75%;
   min-height: 0;
   display: flex;
   flex-direction: row;
-  gap: 5px;
-  padding: 2px;
-
+  gap: 8px;
+  padding: 5px 10px 10px;
 }
-
-/* NORMAL KART + CUSTOMIZE KART */
 
 .kart,
 .add-kart {
   flex: 1;
   min-width: 0;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  padding: 2px;
+  padding: 8px;
   overflow: hidden;
- 
-}
-
-.kart {
-  border: 2px solid rgb(240, 240, 240);
-
+  border: 1px solid rgb(235, 235, 235);
+  background-color: white;
 }
 
 .add-kart {
-  border: 2px dashed rgb(240, 240, 240);
+  border: 1px dashed rgb(220, 220, 220);
 }
 
 .kart h6 {
@@ -419,10 +406,17 @@ body {
   font-size: 9px;
 }
 
-/* CUSTOMIZE */
+.icon-style-ortak {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
 
 .customize-btn,
-.new-project-btn,
 .view-full-calendar-btn {
   border: none;
   background: none;
@@ -434,17 +428,7 @@ body {
   color: rgb(169, 169, 169);
 }
 
-/* GÖREVLER İKONLARI */
-
-.icon-style-ortak {
-  display: flex;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
+/* İKON RENKLERİ */
 
 .add-task-icon {
   color: purple;
@@ -489,11 +473,11 @@ body {
 /* AKTİF PROJELER */
 
 .aktif-projeler {
-  height: 48%;
-  margin-top: 10px;
+  height: 17%;
+  margin: 5px 15px;
   min-height: 0;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
 }
 
@@ -503,6 +487,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 10px;
+}
+
+.aktif_projeler-top h5 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.view-all-projects-btn {
+  border: none;
+  background-color: white;
+  color: purple;
+  font-size: 10px;
 }
 
 .aktif-projeler-kartlari {
@@ -510,28 +507,8 @@ body {
   min-height: 0;
   display: flex;
   flex-direction: row;
-  gap: 5px;
-  padding: 2px;
-
-}
-.view-all-projects-btn {
-  border: none;
-  background-color: white;
-  color: purple;
-  font-size: x-small;
-}
-
-.add-kart {
-  flex: 1;
-  min-width: 0;
-  height: 100%;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 2px;
-  overflow: hidden;
+  gap: 8px;
+  padding: 2px 8px 8px;
 }
 
 .proje {
@@ -545,20 +522,22 @@ body {
   justify-content: flex-start;
   padding: 2px;
   overflow: hidden;
- 
+  border: 1px solid rgb(235, 235, 235);
 }
 
 .proje-img {
   width: 100%;
   height: 50%;
   display: block;
-
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .proje h6 {
-
-  margin-top: 2%;
+  margin: 4px 0;
+  font-size: 10px;
 }
+
 .proje-progress {
   width: 90%;
   display: flex;
@@ -567,98 +546,77 @@ body {
   margin-top: auto;
   margin-bottom: 5px;
   flex-shrink: 0;
-  transform: translateY(-15px);
 }
+
 .progress-bar {
   width: 100%;
   height: 5px;
   background-color: white;
   border: 1px solid rgb(221, 221, 221);
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .progress-dolu-mobile {
   width: 75%;
   height: 100%;
   background-color: rgb(195, 111, 195);
-  border-radius: 5px;
 }
 
 .progress-dolu-commerce {
   width: 45%;
   height: 100%;
   background-color: #dcfce7;
-  border-radius: 5px;
 }
+
 .progress-dolu-marketing {
   width: 60%;
   height: 100%;
   background-color: orange;
-  border-radius: 5px;
 }
 
 .progress-dolu-brand {
   width: 30%;
   height: 100%;
   background-color: navy;
-  border-radius: 5px;
 }
+
 .proje-progress span {
   font-size: 9px;
 }
 
-/* DİĞER BÖLÜM */
-
-.diger-bolum {
-  height: 30%;
-  min-height: 0;
-  margin: 5px 15px;
-  background-color: white;
-  border-radius: 10px;
-}
-
-/* Main bottom*/
-/* MAIN BOTTOM */
+/* ALT BÖLÜM */
 
 .main-bottom {
-  height: 40%;
+  height: 33%;
   min-height: 0;
   margin: 5px 15px;
   display: flex;
   gap: 10px;
-}
-
-.main-bottom-left {
-  width: 60%;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.main-bottom-right {
-  flex: 1;
-  min-width: 0;
-  background-color: white;
-  border-radius: 10px;
-  padding: 5px 10px;
-  display: flex;
-  flex-direction: column;
 }
 
 /* TODAY'S PLAN */
 
-.todays-plan {
-  height: 65%;
-  min-height: 0;
+.main-bottom-left {
+  width: 60%;
+  min-width: 0;
+  height: 100%;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
 }
 
-.todays-plan-top {
-  height: 20%;
+.todays-plan {
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
+}
+
+.todays-plan-top {
+  height: 18%;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 5px 10px;
@@ -666,13 +624,14 @@ body {
 
 .todays-plan-top-left {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
 }
 
 .todays-plan-top h5 {
   margin: 0;
-  font-size: medium;
+  font-size: 14px;
 }
 
 .task-btn {
@@ -688,339 +647,312 @@ body {
   border: 1px solid rgb(221, 221, 221);
   color: black;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 9px;
   padding: 5px 8px;
 }
 
-/* PLAN */
-
 .todays-plan-main {
-  height: 80%;
+  height: 45%;
   display: flex;
   flex-direction: column;
   padding: 0 10px;
 }
 
 .planli-isler {
-  flex: 1;
-  min-height: 0;
+  height: 20%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.planli-isler-adıve-durumu {
+.planli-isler-adive-durumu {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 5px;
   min-width: 0;
 }
 
-.planli-isler-adıve-durumu input {
-  width: 13px;
-  height: 13px;
-}
-
-.is-adi {
+.planli-isler-adive-durumu h6 {
   margin: 0;
   font-size: 9px;
-  font-weight: normal;
 }
 
 .istipi-saat-ortaklar {
   display: flex;
   align-items: center;
   gap: 8px;
+  font-size: 9px;
 }
 
-.is-tipi {
+.istipi-saat-ortaklar span:first-child {
   padding: 3px 6px;
   border-radius: 5px;
-  font-size: 8px;
-}
-
-.design {
-  color: blue;
   background-color: #ede9fe;
-}
-
-.work {
-  background-color: #f3f3f3;
-}
-
-.meeting {
-  background-color: #dcfce7;
-}
-
-.development {
-  background-color: #dff7f0;
-}
-
-.content {
-  background-color: #dbeafe;
-}
-
-.is-saati {
-  font-size: 8px;
-}
-
-.istipi-saat-ortaklar i {
-  font-size: 9px;s
-}
-
-.view-all-tasks {
-  align-self: flex-end;
-  border: none;
-  background: none;
   color: purple;
-  font-size: 9px;
-  margin-top: 3px;
 }
 
 /* QUOTE */
 
 .quote {
-  width: 100%;
-  height: 100%;
-  background-image: url("images/quote.jpg");
+  flex: 1;
+  margin: 5px 10px 10px;
+  border-radius: 12px;
+  background-image: url("images/pazar.jpg");
   background-size: cover;
   background-position: center;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
+  position: relative;
 }
 
 .quote-content {
-  width: 100%;
-  text-align: left;
-  padding-left: 15px;
-}
-
-#quote-text {
-  margin: 0;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   color: white;
-  font-size: 14px;
-  font-weight: bold;
 }
 
-#quote-author {
-  margin-top: 8px;
-  color: white;
-  font-size: 10px;
+.quote-content h3 {
+  margin: 0 0 5px;
+  font-size: 17px;
 }
 
-.new-quote-btn {
-  display: block;
-  margin-top: 8px;
+.quote-content span {
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+#new-quote {
   border: none;
-  padding: 5px 9px;
-  border-radius: 7px;
   background-color: rgb(195, 111, 195);
   color: white;
+  border-radius: 7px;
+  padding: 6px 10px;
   font-size: 9px;
 }
 
 /* TODAY'S SCHEDULE */
 
+.main-bottom-right {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 5px 10px;
+}
+
 .todays-schedule-top {
-  height: 12%;
+  height: 15%;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 5px;
 }
 
 .todays-schedule-top h5 {
-  margin: 0;
-  font-size: medium;
+  margin: 5px 0;
+  font-size: 14px;
 }
 
 #current-day {
-  font-size: 9px;
+  font-size: 10px;
+  color: rgb(100, 100, 100);
 }
 
-/* SCHEDULE */
-
 .schedule-list {
-  flex: 1;
-  min-height: 0;
+  height: 75%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
 }
 
 .schedule-item {
+  flex: 1;
   display: flex;
   align-items: center;
-  min-height: 0;
+  gap: 15px;
+  border-bottom: 1px solid rgb(245, 245, 245);
 }
 
 .schedule-time {
-  width: 55px;
-  font-size: 8px;
-  text-align: right;
+  width: 60px;
+  font-size: 9px;
+  color: rgb(100, 100, 100);
 }
 
-.schedule-line {
-  width: 1px;
-  height: 35px;
-  background-color: rgb(221, 221, 221);
-  margin: 0 10px;
-  position: relative;
-}
-
-.schedule-line::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  background-color: purple;
-  border-radius: 50%;
-  position: absolute;
-  left: -3px;
-  top: 14px;
-}
-
-.schedule-content {
+.schedule-info {
   flex: 1;
   min-width: 0;
-  padding: 7px;
-  border-radius: 7px;
-  background-color: rgb(250, 250, 250);
   position: relative;
 }
 
-.schedule-content h6 {
-  margin: 0 0 3px 0;
-  font-size: 9px;
+.schedule-info h6 {
+  margin: 0 0 4px;
+  font-size: 10px;
 }
 
-.schedule-content span {
-  font-size: 7px;
-  color: rgb(150, 150, 150);
+.schedule-info span {
+  font-size: 8px;
+  color: rgb(160, 160, 160);
 }
 
-.schedule-content small {
+.schedule-info small {
   position: absolute;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 7px;
+  right: 0;
+  top: 0;
+  padding: 3px 6px;
+  border-radius: 5px;
+  background-color: #ede9fe;
   color: purple;
+  font-size: 7px;
 }
 
-/* CALENDAR BUTTON */
-
-.view-full-calendar-btn {
-  align-self: flex-end;
-  border: none;
-  background: none;
+.main-bottom-right .view-full-calendar-btn {
+  display: block;
+  margin-left: auto;
   color: purple;
-  font-size: 9px;
-  padding: 5px;
 }
 
 /* RESPONSIVE */
 
 @media (max-width: 1000px) {
-  .sidebar {
-    width: 18%;
+  .arama {
+    width: 200px;
   }
 
-  .sidebar-header h3 {
-    font-size: 14px;
+  .karsilama-left h1 {
+    font-size: 23px;
   }
 
-  .sidebar-item span,
-  .notification-item span,
-  .settings-item span,
-  .sidebar-profile span {
-    font-size: 11px;
+  .karsilama-btn {
+    width: 35%;
   }
 
-  .sidebar-item {
-    gap: 8px;
-    padding: 8px;
-  }
-
-  .sidebar-middle {
-    gap: 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  .sidebar {
-    width: 65px;
-  }
-
-  .sidebar-header h3,
-  .sidebar-item span,
-  .notification-item span,
-  .settings-item span,
-  .sidebar-profile span {
-    display: none;
-  }
-
-  .sidebar-header {
-    justify-content: center;
-  }
-
-  .sidebar-item {
-    justify-content: center;
-    padding: 8px 0;
-  }
-
-  .notification-item,
-  .settings-item {
-    justify-content: center;
-  }
-
-  .sidebar-profile {
-    justify-content: center;
-  }
-
-  .sidebar-middle {
-    align-items: center;
-  }
-
-  .sidebar-actions {
-    align-items: center;
-  }
-
-  .sidebar-img {
+  .icon-style-ortak {
     width: 35px;
     height: 35px;
   }
+}
 
-  .main-contair {
-    width: calc(100% - 65px);
+@media (max-width: 800px) {
+  .sidebar {
+    width: 55px;
+  }
+
+  .karsilama {
+    height: 25%;
+  }
+
+  .gorevler {
+    height: 25%;
+  }
+
+  .aktif-projeler {
+    height: 18%;
+  }
+
+  .main-bottom {
+    height: 32%;
+  }
+
+  .arama {
+    width: 170px;
+  }
+
+  .karsilama-left h1 {
+    font-size: 20px;
+  }
+
+  .karsilama-left p {
+    font-size: 10px;
+  }
+
+  .karsilama-btn {
+    min-width: 140px;
+    height: 35px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    width: 50px;
+  }
+
+  .navbar {
+    padding: 5px 10px;
+  }
+
+  .arama {
+    width: 140px;
+  }
+
+  .karsilama {
+    gap: 5px;
+  }
+
+  .karsilama-left {
+    width: 65%;
+  }
+
+  .karsilama-right {
+    width: 35%;
+    padding: 8px;
+  }
+
+  .timer-circle {
+    width: 75px;
+    height: 75px;
+  }
+
+  .timer-circle span {
+    font-size: 14px;
+  }
+
+  .main-bottom-left {
+    width: 55%;
   }
 }
 
 @media (max-width: 500px) {
   .sidebar {
-    width: 55px;
-  }
-
-  .main-contair {
-    width: calc(100% - 55px);
-  }
-
-  .sidebar-icons {
-    width: 22px;
-  }
-
-  .navbar {
-    padding: 5px 8px;
-  }
-
-  .nav-right {
-    gap: 8px;
+    width: 45px;
   }
 
   .arama {
-    padding: 4px 6px;
+    width: 120px;
+  }
+
+  .karsilama-left h1 {
+    font-size: 16px;
+  }
+
+  .karsilama-btn {
+    min-width: 100px;
+    width: 50%;
+  }
+
+  .gorevler-kartlari {
+    gap: 3px;
+  }
+
+  .kart h6 {
+    font-size: 8px;
+  }
+
+  .gorevler-kartlari-aciklama {
+    font-size: 7px;
+  }
+
+  .main-bottom-left {
+    width: 50%;
+  }
+
+  .schedule-time {
+    width: 45px;
   }
 }

@@ -3,126 +3,139 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <title>Task Pilot</title>
+
+    <link rel="stylesheet" href="style.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="sayfam">
       <div class="sidebar">
         <div class="sidebar-header">
           <i class="fa-solid fa-clock sidebar-icons"></i>
-          <h3>Task Pilot</h3>
-          <button id="sidebar-toggle">
-            <i class="fa-solid fa-bars"></i>
-          </button>
         </div>
 
         <div class="sidebar-middle">
           <div class="sidebar-item">
             <i class="fa-solid fa-house sidebar-icons"></i>
-            <span>Home</span>
           </div>
+
           <div class="sidebar-item">
             <i class="fa-solid fa-chart-column sidebar-icons"></i>
-            <span>Tasks</span>
           </div>
 
           <div class="sidebar-item">
             <i class="fa-solid fa-briefcase sidebar-icons"></i>
-            <span>Projects</span>
           </div>
+
           <div class="sidebar-item">
             <i class="fa-solid fa-calendar sidebar-icons"></i>
-            <span>Calendar</span>
           </div>
 
           <div class="sidebar-item">
             <i class="fa-solid fa-clipboard-check sidebar-icons"></i>
-            <span>Competed Task</span>
           </div>
 
           <div class="sidebar-item">
             <i class="fa-solid fa-bullseye sidebar-icons"></i>
-            <span>Progress</span>
           </div>
 
           <div class="sidebar-item">
             <i class="fa-solid fa-user-group sidebar-icons"></i>
-            <span>Partners</span>
           </div>
         </div>
+
         <div class="sidebar-bottom">
           <div class="sidebar-actions">
             <div class="notification-item">
               <i class="fa-solid fa-bell sidebar-icons"></i>
-              <span>Notifications</span>
             </div>
 
             <div class="settings-item">
               <i class="fa-solid fa-gear sidebar-icons"></i>
-              <span>Settings</span>
             </div>
           </div>
+
           <div class="sidebar-profile">
-            <span>Ahsen KAS</span>
             <img src="images/cv_foto.jpeg" class="sidebar-img" />
           </div>
         </div>
       </div>
 
       <div class="main-contair">
-        <div class="navbar">
-          <div class="nav-left">
-            <div class="navbar-time">
-              <i class="fa-solid fa-cloud-sun time-icon"></i>
-              <i class="fa-solid fa-sun time-icon"></i>
-              <i class="fa-solid fa-moon time-icon"></i>
+        <!-- NAVBAR -->
 
-              <span id="current-time"></span>
-            </div>
+        <div class="navbar">
+          <div class="navbar-time">
+            <i class="fa-solid fa-sun"></i>
+
+            <span id="current-time"></span>
           </div>
+
           <div class="nav-right">
             <div class="arama">
               <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" placeholder="Search anything" />
+
+              <input type="text" placeholder="Search anything..." />
             </div>
+
+            <i class="fa-solid fa-moon"></i>
           </div>
         </div>
+
         <div class="main">
+          <!-- KARŞILAMA -->
+
           <div class="karsilama">
             <div class="karsilama-left">
               <h1>Good Morning, Ahsen</h1>
-              <span
-                >Lets's make today amazing. You have 8 tasks and 3 events</span
-              >
+
+              <p>Let's make today amazing. You have 8 tasks and 3 events.</p>
+
               <button class="karsilama-btn">
-                Start Planning
+                <span>Start Planning</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
+
+            <!-- FOCUS ZONE -->
+
             <div class="karsilama-right">
               <div class="focus-top">
                 <h5>Focus Zone</h5>
-                <span class="focus">Deep work session</span>
+
+                <span>Deep work session</span>
               </div>
+
               <div class="timer-area">
                 <div class="timer-circle">
-                  <span>25:00</span>
-                  <span>Time Left</span>
+                  <span id="timer-display"> 25:00 </span>
+
+                  <small>Time Left</small>
                 </div>
 
                 <button class="timer">Start timer</button>
               </div>
+
               <div class="focus-bottom">
-                <h6>Todays Goal</h6>
-                <span>Completed</span>
+                <h6>Today's Goal</h6>
+
+                <span>2 / 3 completed</span>
+
+                <div class="goal-progress">
+                  <div class="goal-progress-dolu"></div>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- AKTİVİTELER -->
 
           <div class="gorevler">
             <div class="gorevler-islemler">
@@ -133,9 +146,11 @@
               <div class="gorevler-kartlari">
                 <div class="kart">
                   <div class="icon-style-ortak add-task-bg">
-                    <i class="fa-regular fa-circle-check add-task-icon"></i>
+                    <i class="fa-solid fa-circle-check add-task-icon"></i>
                   </div>
+
                   <h6>Add task</h6>
+
                   <span class="gorevler-kartlari-aciklama">
                     Quickly capture a new task
                   </span>
@@ -143,9 +158,11 @@
 
                 <div class="kart">
                   <div class="icon-style-ortak new-project-bg">
-                    <i class="fa-regular fa-folder-closed new-project-icon"></i>
+                    <i class="fa-solid fa-folder new-project-icon"></i>
                   </div>
+
                   <h6>New Project</h6>
+
                   <span class="gorevler-kartlari-aciklama">
                     Start working on something
                   </span>
@@ -153,9 +170,11 @@
 
                 <div class="kart">
                   <div class="icon-style-ortak schedule-bg">
-                    <i class="fa-regular fa-calendar schedule-icon"></i>
+                    <i class="fa-solid fa-calendar schedule-icon"></i>
                   </div>
+
                   <h6>Schedule</h6>
+
                   <span class="gorevler-kartlari-aciklama">
                     Plan your calendar
                   </span>
@@ -163,9 +182,11 @@
 
                 <div class="kart">
                   <div class="icon-style-ortak remind-bg">
-                    <i class="fa-regular fa-bell remind-me-icon"></i>
+                    <i class="fa-solid fa-bell remind-me-icon"></i>
                   </div>
+
                   <h6>Remind Me</h6>
+
                   <span class="gorevler-kartlari-aciklama">
                     Set a smart reminder
                   </span>
@@ -173,85 +194,117 @@
 
                 <div class="kart">
                   <div class="icon-style-ortak write-note-bg">
-                    <i class="fa-regular fa-file-lines write-not-icon"></i>
+                    <i class="fa-solid fa-clipboard write-not-icon"></i>
                   </div>
+
                   <h6>Write Note</h6>
+
                   <span class="gorevler-kartlari-aciklama">
-                    Write Down your thoughts
+                    Write down your thoughts
                   </span>
                 </div>
 
                 <div class="add-kart">
-                  <i class="fa-regular fa-plus customize-icon"></i>
+                  <i class="fa-solid fa-plus customize-icon"></i>
+
                   <button class="customize-btn">Customize</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="aktif-projeler">
-              <div class="aktif_projeler-top">
-                <h5>Active Projects</h5>
-                <button class="view-all-projects-btn">
-                  View all projects
-                  <i class="fa-solid fa-arrow-right view-all-project-icon"> </i>
-                </button>
-              </div>
-              <div class="aktif-projeler-kartlari">
-                <div class="proje">
-                  <img src="images/mobie.jpg" class="proje-img" />
-
-                  <h6>Mobile App Redesign</h6>
-                  <div class="proje-progress">
-                    <div class="progress-bar">
-                      <div class="progress-dolu-mobile"></div>
-                    </div>
-                    <span>75%</span>
-                  </div>
-                </div>
-                <div class="proje">
-                  <img src="images/e-commerce.jpg" class="proje-img" />
-                  <h6>E-Commerce Platform</h6>
-                  <div class="proje-progress">
-                    <div class="progress-bar">
-                      <div class="progress-dolu-commerce"></div>
-                    </div>
-                    <span>45%</span>
-                  </div>
-                </div>
-                <div class="proje">
-                  <img src="images/marketing-campaign.jpg" class="proje-img" />
-                  <h6>Marketing Campaign</h6>
-                  <div class="proje-progress">
-                    <div class="progress-bar">
-                      <div class="progress-dolu-marketing"></div>
-                    </div>
-                    <span>60%</span>
-                  </div>
-                </div>
-                <div class="proje">
-                  <img src="images/brand-identity.jpg" class="proje-img" />
-                  <h6>Brand Identitiy</h6>
-                  <div class="proje-progress">
-                    <div class="progress-bar">
-                      <div class="progress-dolu-brand"></div>
-                    </div>
-                    <span>30%</span>
-                  </div>
-                </div>
-                <div class="add-kart">
-                  <i class="fa-regular fa-plus customize-icon"></i>
-                  <button class="new-project-btn">New Project</button>
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- AKTİF PROJELER -->
+
+          <div class="aktif-projeler">
+            <div class="aktif_projeler-top">
+              <h5>Active Projects</h5>
+
+              <button class="view-all-projects-btn">
+                View all projects
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <div class="aktif-projeler-kartlari">
+              <div class="proje">
+                <img
+                  src="images/mobile.jpg"
+                  class="proje-img"
+                  alt="mobile_img"
+                />
+
+                <h6>Mobile App Redesign</h6>
+
+                <div class="proje-progress">
+                  <div class="progress-bar">
+                    <div class="progress-dolu-mobile"></div>
+                  </div>
+
+                  <span>75%</span>
+                </div>
+              </div>
+
+              <div class="proje">
+                <img src="images/e-commerce.jpg" class="proje-img" />
+
+                <h6>E-Commerce Platform</h6>
+
+                <div class="proje-progress">
+                  <div class="progress-bar">
+                    <div class="progress-dolu-commerce"></div>
+                  </div>
+
+                  <span>45%</span>
+                </div>
+              </div>
+
+              <div class="proje">
+                <img src="images/marketing.jpg" class="proje-img" />
+
+                <h6>Marketing Campaign</h6>
+
+                <div class="proje-progress">
+                  <div class="progress-bar">
+                    <div class="progress-dolu-marketing"></div>
+                  </div>
+
+                  <span>60%</span>
+                </div>
+              </div>
+
+              <div class="proje">
+                <img src="images/brand.jpg" class="proje-img" />
+
+                <h6>Brand Identity</h6>
+
+                <div class="proje-progress">
+                  <div class="progress-bar">
+                    <div class="progress-dolu-brand"></div>
+                  </div>
+
+                  <span>30%</span>
+                </div>
+              </div>
+
+              <div class="add-kart">
+                <i class="fa-solid fa-plus customize-icon"></i>
+
+                <button class="customize-btn">New Project</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ALT BÖLÜM -->
+
           <div class="main-bottom">
+            <!-- TODAY'S PLAN -->
+
             <div class="main-bottom-left">
               <div class="todays-plan">
                 <div class="todays-plan-top">
                   <div class="todays-plan-top-left">
-                    <h5>Todays's Plan</h5>
+                    <h5>Today's Plan</h5>
+
                     <button class="task-btn">8 tasks</button>
                   </div>
 
@@ -263,160 +316,159 @@
 
                 <div class="todays-plan-main">
                   <div class="planli-isler">
-                    <div class="planli-isler-adıve-durumu">
+                    <div class="planli-isler-adive-durumu">
                       <input type="checkbox" checked />
-                      <h6 class="is-adi">Design landing page hero section</h6>
+
+                      <h6>Design landing page hero section</h6>
                     </div>
 
                     <div class="istipi-saat-ortaklar">
-                      <span class="is-tipi design">Design</span>
-                      <span class="is-saati">09:00 AM</span>
+                      <span>Design</span>
+                      <span>09:00 AM</span>
                       <i class="fa-solid fa-user"></i>
                     </div>
                   </div>
 
                   <div class="planli-isler">
-                    <div class="planli-isler-adıve-durumu">
+                    <div class="planli-isler-adive-durumu">
                       <input type="checkbox" />
-                      <h6 class="is-adi">Prepare project presentation</h6>
+
+                      <h6>Prepare project presentation</h6>
                     </div>
 
                     <div class="istipi-saat-ortaklar">
-                      <span class="is-tipi work">Work</span>
-                      <span class="is-saati">11:00 AM</span>
+                      <span>Work</span>
+                      <span>11:00 AM</span>
                       <i class="fa-solid fa-user"></i>
                     </div>
                   </div>
 
                   <div class="planli-isler">
-                    <div class="planli-isler-adıve-durumu">
+                    <div class="planli-isler-adive-durumu">
                       <input type="checkbox" />
-                      <h6 class="is-adi">Client meeting</h6>
+
+                      <h6>Client meeting</h6>
                     </div>
 
                     <div class="istipi-saat-ortaklar">
-                      <span class="is-tipi meeting">Meeting</span>
-                      <span class="is-saati">01:00 PM</span>
+                      <span>Meeting</span>
+                      <span>01:00 PM</span>
                       <i class="fa-solid fa-user-group"></i>
                     </div>
                   </div>
 
                   <div class="planli-isler">
-                    <div class="planli-isler-adıve-durumu">
+                    <div class="planli-isler-adive-durumu">
                       <input type="checkbox" />
-                      <h6 class="is-adi">Fix navigation bug</h6>
+
+                      <h6>Fix navigation bug</h6>
                     </div>
 
                     <div class="istipi-saat-ortaklar">
-                      <span class="is-tipi development">Development</span>
-                      <span class="is-saati">03:30 PM</span>
+                      <span>Development</span>
+                      <span>03:30 PM</span>
                       <i class="fa-solid fa-user"></i>
                     </div>
                   </div>
 
                   <div class="planli-isler">
-                    <div class="planli-isler-adıve-durumu">
+                    <div class="planli-isler-adive-durumu">
                       <input type="checkbox" />
-                      <h6 class="is-adi">Write blog post</h6>
+
+                      <h6>Write blog post</h6>
                     </div>
 
                     <div class="istipi-saat-ortaklar">
-                      <span class="is-tipi content">Content</span>
-                      <span class="is-saati">05:00 PM</span>
+                      <span>Content</span>
+                      <span>05:00 PM</span>
                       <i class="fa-solid fa-user"></i>
                     </div>
                   </div>
-
-                  <button class="view-all-tasks">
-                    View all tasks
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
                 </div>
-              </div>
 
-              <div class="quote">
-                <div class="quote-content">
-                  <p id="quote-text"></p>
-                  <span id="quote-author"></span>
-                  <button class="new-quote-btn">New Quote</button>
+                <!-- QUOTE -->
+
+                <div class="quote">
+                  <div class="quote-content">
+                    <h3 id="quote-text">Kendini bil.</h3>
+
+                    <span id="quote-author"> — Sokrates </span>
+
+                    <button id="new-quote">
+                      New Quote
+                      <i class="fa-solid fa-rotate"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
 
+            <!-- TODAY'S SCHEDULE -->
+
             <div class="main-bottom-right">
               <div class="todays-schedule-top">
-                <h5>Todays's Schedule</h5>
+                <h5>Today's Schedule</h5>
 
                 <span id="current-day"></span>
               </div>
 
               <div class="schedule-list">
                 <div class="schedule-item">
-                  <div class="schedule-time">
-                    <span>09:00 AM</span>
-                  </div>
+                  <span class="schedule-time"> 09:00 AM </span>
 
-                  <div class="schedule-line"></div>
-
-                  <div class="schedule-content">
+                  <div class="schedule-info">
                     <h6>Design Focus Time</h6>
-                    <span>09:00 AM - 10:30 AM</span>
+
+                    <span> 09:00 AM - 10:30 AM </span>
+
                     <small>Focus</small>
                   </div>
                 </div>
 
                 <div class="schedule-item">
-                  <div class="schedule-time">
-                    <span>11:00 AM</span>
-                  </div>
+                  <span class="schedule-time"> 11:00 AM </span>
 
-                  <div class="schedule-line"></div>
-
-                  <div class="schedule-content">
+                  <div class="schedule-info">
                     <h6>Team Stand-up</h6>
-                    <span>11:00 AM - 11:30 AM</span>
+
+                    <span> 11:00 AM - 11:30 AM </span>
+
                     <small>Meeting</small>
                   </div>
                 </div>
 
                 <div class="schedule-item">
-                  <div class="schedule-time">
-                    <span>01:00 PM</span>
-                  </div>
+                  <span class="schedule-time"> 01:00 PM </span>
 
-                  <div class="schedule-line"></div>
-
-                  <div class="schedule-content">
+                  <div class="schedule-info">
                     <h6>Client Meeting</h6>
-                    <span>01:00 PM - 02:00 PM</span>
+
+                    <span> 01:00 PM - 02:00 PM </span>
+
                     <small>Meeting</small>
                   </div>
                 </div>
 
                 <div class="schedule-item">
-                  <div class="schedule-time">
-                    <span>03:30 PM</span>
-                  </div>
+                  <span class="schedule-time"> 03:30 PM </span>
 
-                  <div class="schedule-line"></div>
-
-                  <div class="schedule-content">
+                  <div class="schedule-info">
                     <h6>Development Time</h6>
-                    <span>03:30 PM - 05:00 PM</span>
+
+                    <span> 03:30 PM - 05:00 PM </span>
+
                     <small>Work</small>
                   </div>
                 </div>
 
                 <div class="schedule-item">
-                  <div class="schedule-time">
-                    <span>06:00 PM</span>
-                  </div>
+                  <span class="schedule-time"> 06:00 PM </span>
 
-                  <div class="schedule-line"></div>
-
-                  <div class="schedule-content">
+                  <div class="schedule-info">
                     <h6>Gym & Fitness</h6>
-                    <span>06:00 PM - 07:00 PM</span>
+
+                    <span> 06:00 PM - 07:00 PM </span>
+
                     <small>Personal</small>
                   </div>
                 </div>
@@ -431,6 +483,7 @@
         </div>
       </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
