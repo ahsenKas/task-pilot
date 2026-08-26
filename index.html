@@ -93,8 +93,10 @@
 
           <div class="karsilama">
             <div class="karsilama-left">
-              <h1>Good Morning, Ahsen</h1>
-
+              <h1>
+                Good Morning, Ahsen
+                <i class="fa-solid fa-hand karsilama-icon"></i>
+              </h1>
               <p>Let's make today amazing. You have 8 tasks and 3 events.</p>
 
               <button class="karsilama-btn">
@@ -114,9 +116,11 @@
 
               <div class="timer-area">
                 <div class="timer-circle">
-                  <span id="timer-display"> 25:00 </span>
+                  <div class="timer-circle-ic">
+                    <span id="timer-display"> 25:00 </span>
 
-                  <small>Time Left</small>
+                    <small>Time Left</small>
+                  </div>
                 </div>
 
                 <button class="timer">Start timer</button>
@@ -235,6 +239,12 @@
                 <h6>Mobile App Redesign</h6>
 
                 <div class="proje-progress">
+                  <div class="proje-avatars">
+                    <img class="proje-avatar" src="images/kisi1.jpg" alt="" />
+                    <img class="proje-avatar" src="images/kisi2.jpg" alt="" />
+                    <span class="proje-avatar-more">+3</span>
+                  </div>
+
                   <div class="progress-bar">
                     <div class="progress-dolu-mobile"></div>
                   </div>
@@ -249,6 +259,11 @@
                 <h6>E-Commerce Platform</h6>
 
                 <div class="proje-progress">
+                  <div class="proje-avatars">
+                    <img class="proje-avatar" src="images/kisi3.jpg" alt="" />
+                    <span class="proje-avatar-more">+2</span>
+                  </div>
+
                   <div class="progress-bar">
                     <div class="progress-dolu-commerce"></div>
                   </div>
@@ -263,6 +278,12 @@
                 <h6>Marketing Campaign</h6>
 
                 <div class="proje-progress">
+                  <div class="proje-avatars">
+                    <img class="proje-avatar" src="images/kisi4.jpg" alt="" />
+                    <img class="proje-avatar" src="images/kisi5.jpg" alt="" />
+                    <span class="proje-avatar-more">+4</span>
+                  </div>
+
                   <div class="progress-bar">
                     <div class="progress-dolu-marketing"></div>
                   </div>
@@ -277,6 +298,11 @@
                 <h6>Brand Identity</h6>
 
                 <div class="proje-progress">
+                  <div class="proje-avatars">
+                    <img class="proje-avatar" src="images/kisi6.jpg" alt="" />
+                    <span class="proje-avatar-more">+1</span>
+                  </div>
+
                   <div class="progress-bar">
                     <div class="progress-dolu-brand"></div>
                   </div>
@@ -317,74 +343,79 @@
                   <div class="planli-isler">
                     <div class="planli-isler-adive-durumu">
                       <input type="checkbox" checked />
-
                       <h6>Design landing page hero section</h6>
                     </div>
 
                     <div class="istipi-saat-ortaklar">
-                      <span>Design</span>
+                      <span class="etiket-design">Design</span>
                       <span>09:00 AM</span>
-                      <i class="fa-solid fa-user"></i>
+                      <img class="task-avatar" src="images/kisi1.jpg" alt="" />
                     </div>
                   </div>
 
                   <div class="planli-isler">
                     <div class="planli-isler-adive-durumu">
                       <input type="checkbox" />
-
                       <h6>Prepare project presentation</h6>
                     </div>
 
                     <div class="istipi-saat-ortaklar">
-                      <span>Work</span>
+                      <span class="etiket-work">Work</span>
                       <span>11:00 AM</span>
-                      <i class="fa-solid fa-user"></i>
+                      <img class="task-avatar" src="images/kisi2.jpg" alt="" />
                     </div>
                   </div>
 
                   <div class="planli-isler">
                     <div class="planli-isler-adive-durumu">
                       <input type="checkbox" />
-
                       <h6>Client meeting</h6>
                     </div>
 
                     <div class="istipi-saat-ortaklar">
-                      <span>Meeting</span>
+                      <span class="etiket-meeting">Meeting</span>
                       <span>01:00 PM</span>
-                      <i class="fa-solid fa-user-group"></i>
+                      <span class="task-avatar-group">
+                        <img
+                          class="task-avatar"
+                          src="images/kisi3.jpg"
+                          alt=""
+                        />
+                        <img
+                          class="task-avatar"
+                          src="images/kisi4.jpg"
+                          alt=""
+                        />
+                      </span>
                     </div>
                   </div>
 
                   <div class="planli-isler">
                     <div class="planli-isler-adive-durumu">
                       <input type="checkbox" />
-
                       <h6>Fix navigation bug</h6>
                     </div>
 
                     <div class="istipi-saat-ortaklar">
-                      <span>Development</span>
+                      <span class="etiket-development">Development</span>
                       <span>03:30 PM</span>
-                      <i class="fa-solid fa-user"></i>
+                      <img class="task-avatar" src="images/kisi5.jpg" alt="" />
                     </div>
                   </div>
 
                   <div class="planli-isler">
                     <div class="planli-isler-adive-durumu">
                       <input type="checkbox" />
-
                       <h6>Write blog post</h6>
                     </div>
 
                     <div class="istipi-saat-ortaklar">
-                      <span>Content</span>
+                      <span class="etiket-content">Content</span>
                       <span>05:00 PM</span>
-                      <i class="fa-solid fa-user"></i>
+                      <img class="task-avatar" src="images/kisi6.jpg" alt="" />
                     </div>
                   </div>
                 </div>
-
                 <!-- QUOTE -->
 
                 <div class="quote">
@@ -415,6 +446,8 @@
                 <div class="schedule-item">
                   <span class="schedule-time"> 09:00 AM </span>
 
+                  <span class="schedule-dot"></span>
+
                   <div class="schedule-info">
                     <h6>Design Focus Time</h6>
 
@@ -426,6 +459,8 @@
 
                 <div class="schedule-item">
                   <span class="schedule-time"> 11:00 AM </span>
+
+                  <span class="schedule-dot"></span>
 
                   <div class="schedule-info">
                     <h6>Team Stand-up</h6>
@@ -439,6 +474,8 @@
                 <div class="schedule-item">
                   <span class="schedule-time"> 01:00 PM </span>
 
+                  <span class="schedule-dot"></span>
+
                   <div class="schedule-info">
                     <h6>Client Meeting</h6>
 
@@ -451,6 +488,8 @@
                 <div class="schedule-item">
                   <span class="schedule-time"> 03:30 PM </span>
 
+                  <span class="schedule-dot"></span>
+
                   <div class="schedule-info">
                     <h6>Development Time</h6>
 
@@ -462,6 +501,8 @@
 
                 <div class="schedule-item">
                   <span class="schedule-time"> 06:00 PM </span>
+
+                  <span class="schedule-dot"></span>
 
                   <div class="schedule-info">
                     <h6>Gym & Fitness</h6>
