@@ -22,23 +22,45 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  border: 2px solid navy;
+  align-items: center;
+  transition: 0.3s;
+}
+
+#sidebar-toggle {
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 10px;
+  align-self: flex-end;
 }
 
 .sidebar-header {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 10px;
 }
 
 .sidebar-middle {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 25px;
+  margin-top: 30px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 15px;
 }
 
 .sidebar-bottom {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,17 +68,10 @@ body {
   gap: 25px;
 }
 
-.sidebar-img {
-  height: 50%;
-  width: 50px;
-  border-radius: 50%;
-}
-
 .sidebar-actions {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  align-items: center;
 }
 
 .notification-item,
@@ -64,14 +79,13 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 120px;
 }
 
 .sidebar-profile {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   gap: 10px;
   width: 100%;
 }
@@ -80,7 +94,58 @@ body {
   display: inline-flex;
   width: 25px;
   justify-content: center;
+  flex-shrink: 0;
 }
+
+.sidebar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* SIDEBAR-CLOSED*/
+.sidebar.closed {
+  width: 6%;
+}
+
+.sidebar.closed .sidebar-header h3,
+.sidebar.closed .sidebar-item span,
+.sidebar.closed .notification-item span,
+.sidebar.closed .settings-item span,
+.sidebar.closed .sidebar-profile span {
+  display: none;
+}
+
+.sidebar.closed .sidebar-header {
+  justify-content: center;
+}
+
+.sidebar.closed .sidebar-item {
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.sidebar.closed .notification-item,
+.sidebar.closed .settings-item {
+  justify-content: center;
+}
+
+.sidebar.closed .sidebar-profile {
+  justify-content: center;
+}
+
+.sidebar.closed .sidebar-middle {
+  align-items: center;
+}
+
+.sidebar.closed .sidebar-actions {
+  align-items: center;
+}
+
+.sidebar.closed #sidebar-toggle {
+  align-self: center;
+}
+
 
 /* MAIN AREA */
 
@@ -96,14 +161,32 @@ body {
 /* NAVBAR */
 
 .navbar {
-  height: 7%;
+  height: 6%;
   min-height: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border: 2px solid palevioletred;
-  padding: 5px 15px;
+   padding: 5px 15px;
+}
+
+.time-icon {
+  display: none;
+}
+.time-icon {
+  display: none;
+}
+
+.time-icon:first-child {
+  color: lightblue;
+}
+
+.time-icon:nth-child(2) {
+  color: orange;
+}
+
+.time-icon:nth-child(3) {
+  color: purple;
 }
 
 .nav-right {
@@ -151,14 +234,13 @@ body {
   background-image: url("images/karsilama.jpg");
   background-size: cover;
   background-position: center;
-  border: 2px solid navy;
   display: flex;
   flex-direction: column;
 }
 
 .karsilama-btn {
   width: 26%;
-  height: 30%;
+  height: 20%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -174,7 +256,6 @@ body {
 .karsilama-right {
   width: 30%;
   height: 98%;
-  border: 2px solid navy;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -297,7 +378,7 @@ body {
   flex-direction: row;
   gap: 5px;
   padding: 2px;
-  border: 2px solid brown;
+
 }
 
 /* NORMAL KART + CUSTOMIZE KART */
@@ -314,12 +395,12 @@ body {
   justify-content: space-evenly;
   padding: 2px;
   overflow: hidden;
-  border: 2px solid brown;
+ 
 }
 
 .kart {
   border: 2px solid rgb(240, 240, 240);
-  border: 2px solid brown;
+
 }
 
 .add-kart {
@@ -341,6 +422,7 @@ body {
 /* CUSTOMIZE */
 
 .customize-btn,
+.new-project-btn,
 .view-full-calendar-btn {
   border: none;
   background: none;
@@ -430,7 +512,7 @@ body {
   flex-direction: row;
   gap: 5px;
   padding: 2px;
-  border: 2px solid brown;
+
 }
 .view-all-projects-btn {
   border: none;
@@ -463,18 +545,18 @@ body {
   justify-content: flex-start;
   padding: 2px;
   overflow: hidden;
-  border: 2px solid brown;
+ 
 }
 
 .proje-img {
   width: 100%;
-  height: 30%;
+  height: 50%;
   display: block;
-  border: 2px solid brown;
+
 }
 
 .proje h6 {
-  border: 2px solid brown;
+
   margin-top: 2%;
 }
 .proje-progress {
@@ -536,54 +618,61 @@ body {
 }
 
 /* Main bottom*/
+/* MAIN BOTTOM */
 
 .main-bottom {
   height: 40%;
   min-height: 0;
   margin: 5px 15px;
-  background-color: white;
-  border-radius: 10px;
+  display: flex;
+  gap: 10px;
 }
 
-.main-bottom {
+.main-bottom-left {
+  width: 60%;
+  min-width: 0;
   display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
 .main-bottom-right {
   flex: 1;
-  border: 1px solid blueviolet;
-}
-.todays-schedule-top {
+  min-width: 0;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-right: 15px;
+  flex-direction: column;
 }
 
-#current-day {
-  font-size: smaller;
-}
+/* TODAY'S PLAN */
 
-/*Main bottom left*/
-
-.main-bottom-left {
-  width: 60%;
-  border: 1px solid rgb(221, 221, 221);
+.todays-plan {
+  height: 65%;
+  min-height: 0;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .todays-plan-top {
+  height: 20%;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 5px;
+  padding: 5px 10px;
 }
 
 .todays-plan-top-left {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.todays-plan-top h5 {
+  margin: 0;
+  font-size: medium;
 }
 
 .task-btn {
@@ -591,14 +680,244 @@ body {
   color: purple;
   background-color: #ede9fe;
   border-radius: 10px;
-  font-size: x-small;
+  font-size: 9px;
+  padding: 4px 7px;
 }
 
 .sort-btn {
-  border: none;
+  border: 1px solid rgb(221, 221, 221);
   color: black;
   background-color: white;
+  border-radius: 8px;
+  font-size: 9px;
+  padding: 5px 8px;
+}
+
+/* PLAN */
+
+.todays-plan-main {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+.planli-isler {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.planli-isler-adıve-durumu {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+}
+
+.planli-isler-adıve-durumu input {
+  width: 13px;
+  height: 13px;
+}
+
+.is-adi {
+  margin: 0;
+  font-size: 9px;
+  font-weight: normal;
+}
+
+.istipi-saat-ortaklar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.is-tipi {
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 8px;
+}
+
+.design {
+  color: blue;
+  background-color: #ede9fe;
+}
+
+.work {
+  background-color: #f3f3f3;
+}
+
+.meeting {
+  background-color: #dcfce7;
+}
+
+.development {
+  background-color: #dff7f0;
+}
+
+.content {
+  background-color: #dbeafe;
+}
+
+.is-saati {
+  font-size: 8px;
+}
+
+.istipi-saat-ortaklar i {
+  font-size: 9px;s
+}
+
+.view-all-tasks {
+  align-self: flex-end;
+  border: none;
+  background: none;
+  color: purple;
+  font-size: 9px;
+  margin-top: 3px;
+}
+
+/* QUOTE */
+
+.quote {
+  width: 100%;
+  height: 100%;
+  background-image: url("images/quote.jpg");
+  background-size: cover;
+  background-position: center;
   border-radius: 10px;
-  font-size: x-small;
-  border: 1px solid rgb(221, 221, 221);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.quote-content {
+  width: 100%;
+  text-align: left;
+  padding-left: 15px;
+}
+
+#quote-text {
+  margin: 0;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#quote-author {
+  margin-top: 8px;
+  color: white;
+  font-size: 10px;
+}
+
+.new-quote-btn {
+  display: block;
+  margin-top: 8px;
+  border: none;
+  padding: 5px 9px;
+  border-radius: 7px;
+  background-color: rgb(195, 111, 195);
+  color: white;
+  font-size: 9px;
+}
+
+/* TODAY'S SCHEDULE */
+
+.todays-schedule-top {
+  height: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 5px;
+}
+
+.todays-schedule-top h5 {
+  margin: 0;
+  font-size: medium;
+}
+
+#current-day {
+  font-size: 9px;
+}
+
+/* SCHEDULE */
+
+.schedule-list {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+  min-height: 0;
+}
+
+.schedule-time {
+  width: 55px;
+  font-size: 8px;
+  text-align: right;
+}
+
+.schedule-line {
+  width: 1px;
+  height: 35px;
+  background-color: rgb(221, 221, 221);
+  margin: 0 10px;
+  position: relative;
+}
+
+.schedule-line::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: purple;
+  border-radius: 50%;
+  position: absolute;
+  left: -3px;
+  top: 14px;
+}
+
+.schedule-content {
+  flex: 1;
+  min-width: 0;
+  padding: 7px;
+  border-radius: 7px;
+  background-color: rgb(250, 250, 250);
+  position: relative;
+}
+
+.schedule-content h6 {
+  margin: 0 0 3px 0;
+  font-size: 9px;
+}
+
+.schedule-content span {
+  font-size: 7px;
+  color: rgb(150, 150, 150);
+}
+
+.schedule-content small {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 7px;
+  color: purple;
+}
+
+/* CALENDAR BUTTON */
+
+.view-full-calendar-btn {
+  align-self: flex-end;
+  border: none;
+  background: none;
+  color: purple;
+  font-size: 9px;
+  padding: 5px;
 }

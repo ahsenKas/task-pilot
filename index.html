@@ -16,6 +16,9 @@
         <div class="sidebar-header">
           <i class="fa-solid fa-clock sidebar-icons"></i>
           <h3>Task Pilot</h3>
+          <button id="sidebar-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
 
         <div class="sidebar-middle">
@@ -75,7 +78,10 @@
         <div class="navbar">
           <div class="nav-left">
             <div class="navbar-time">
-              <i class="fa-solid fa-sun"></i>
+              <i class="fa-solid fa-cloud-sun time-icon"></i>
+              <i class="fa-solid fa-sun time-icon"></i>
+              <i class="fa-solid fa-moon time-icon"></i>
+
               <span id="current-time"></span>
             </div>
           </div>
@@ -84,7 +90,6 @@
               <i class="fa-solid fa-magnifying-glass"></i>
               <input type="text" placeholder="Search anything" />
             </div>
-            <i class="fa-solid fa-sun"></i>
           </div>
         </div>
         <div class="main">
@@ -92,7 +97,7 @@
             <div class="karsilama-left">
               <h1>Good Morning, Ahsen</h1>
               <span
-                >Lets's make today amazing. Yoy have 8 tasks and 3 events</span
+                >Lets's make today amazing. You have 8 tasks and 3 events</span
               >
               <button class="karsilama-btn">
                 Start Planning
@@ -247,13 +252,97 @@
                 <div class="todays-plan-top">
                   <div class="todays-plan-top-left">
                     <h5>Todays's Plan</h5>
-                    <button class="task-btn">8 Task</button>
+                    <button class="task-btn">8 tasks</button>
                   </div>
-                  <button class="sort-btn">Sort By Priority</button>
+
+                  <button class="sort-btn">
+                    Sort by Priority
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                </div>
+
+                <div class="todays-plan-main">
+                  <div class="planli-isler">
+                    <div class="planli-isler-adıve-durumu">
+                      <input type="checkbox" checked />
+                      <h6 class="is-adi">Design landing page hero section</h6>
+                    </div>
+
+                    <div class="istipi-saat-ortaklar">
+                      <span class="is-tipi design">Design</span>
+                      <span class="is-saati">09:00 AM</span>
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                  </div>
+
+                  <div class="planli-isler">
+                    <div class="planli-isler-adıve-durumu">
+                      <input type="checkbox" />
+                      <h6 class="is-adi">Prepare project presentation</h6>
+                    </div>
+
+                    <div class="istipi-saat-ortaklar">
+                      <span class="is-tipi work">Work</span>
+                      <span class="is-saati">11:00 AM</span>
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                  </div>
+
+                  <div class="planli-isler">
+                    <div class="planli-isler-adıve-durumu">
+                      <input type="checkbox" />
+                      <h6 class="is-adi">Client meeting</h6>
+                    </div>
+
+                    <div class="istipi-saat-ortaklar">
+                      <span class="is-tipi meeting">Meeting</span>
+                      <span class="is-saati">01:00 PM</span>
+                      <i class="fa-solid fa-user-group"></i>
+                    </div>
+                  </div>
+
+                  <div class="planli-isler">
+                    <div class="planli-isler-adıve-durumu">
+                      <input type="checkbox" />
+                      <h6 class="is-adi">Fix navigation bug</h6>
+                    </div>
+
+                    <div class="istipi-saat-ortaklar">
+                      <span class="is-tipi development">Development</span>
+                      <span class="is-saati">03:30 PM</span>
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                  </div>
+
+                  <div class="planli-isler">
+                    <div class="planli-isler-adıve-durumu">
+                      <input type="checkbox" />
+                      <h6 class="is-adi">Write blog post</h6>
+                    </div>
+
+                    <div class="istipi-saat-ortaklar">
+                      <span class="is-tipi content">Content</span>
+                      <span class="is-saati">05:00 PM</span>
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                  </div>
+
+                  <button class="view-all-tasks">
+                    View all tasks
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
                 </div>
               </div>
-              <div class="quote"></div>
+
+              <div class="quote">
+                <div class="quote-content">
+                  <p id="quote-text"></p>
+                  <span id="quote-author"></span>
+                  <button class="new-quote-btn">New Quote</button>
+                </div>
+              </div>
             </div>
+
             <div class="main-bottom-right">
               <div class="todays-schedule-top">
                 <h5>Todays's Schedule</h5>
@@ -261,8 +350,81 @@
                 <span id="current-day"></span>
               </div>
 
+              <div class="schedule-list">
+                <div class="schedule-item">
+                  <div class="schedule-time">
+                    <span>09:00 AM</span>
+                  </div>
+
+                  <div class="schedule-line"></div>
+
+                  <div class="schedule-content">
+                    <h6>Design Focus Time</h6>
+                    <span>09:00 AM - 10:30 AM</span>
+                    <small>Focus</small>
+                  </div>
+                </div>
+
+                <div class="schedule-item">
+                  <div class="schedule-time">
+                    <span>11:00 AM</span>
+                  </div>
+
+                  <div class="schedule-line"></div>
+
+                  <div class="schedule-content">
+                    <h6>Team Stand-up</h6>
+                    <span>11:00 AM - 11:30 AM</span>
+                    <small>Meeting</small>
+                  </div>
+                </div>
+
+                <div class="schedule-item">
+                  <div class="schedule-time">
+                    <span>01:00 PM</span>
+                  </div>
+
+                  <div class="schedule-line"></div>
+
+                  <div class="schedule-content">
+                    <h6>Client Meeting</h6>
+                    <span>01:00 PM - 02:00 PM</span>
+                    <small>Meeting</small>
+                  </div>
+                </div>
+
+                <div class="schedule-item">
+                  <div class="schedule-time">
+                    <span>03:30 PM</span>
+                  </div>
+
+                  <div class="schedule-line"></div>
+
+                  <div class="schedule-content">
+                    <h6>Development Time</h6>
+                    <span>03:30 PM - 05:00 PM</span>
+                    <small>Work</small>
+                  </div>
+                </div>
+
+                <div class="schedule-item">
+                  <div class="schedule-time">
+                    <span>06:00 PM</span>
+                  </div>
+
+                  <div class="schedule-line"></div>
+
+                  <div class="schedule-content">
+                    <h6>Gym & Fitness</h6>
+                    <span>06:00 PM - 07:00 PM</span>
+                    <small>Personal</small>
+                  </div>
+                </div>
+              </div>
+
               <button class="view-full-calendar-btn">
-                View full calendar <i class="fa-solid fa-arrow-right"></i>
+                View full calendar
+                <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
           </div>
