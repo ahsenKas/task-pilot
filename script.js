@@ -120,3 +120,15 @@ const sidebarToggle = document.querySelector("#sidebar-toggle");
 sidebarToggle.addEventListener("click", () => {
   sidebar.classList.toggle("closed");
 });
+
+const sidebarItems = document.querySelectorAll(".sidebar-item");
+
+sidebarItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    sidebarItems.forEach((item) => {
+      item.classList.remove("active");
+    });
+
+    item.classList.add("active");
+  });
+});
