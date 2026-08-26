@@ -921,3 +921,106 @@ body {
   font-size: 9px;
   padding: 5px;
 }
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .sidebar {
+    width: 18%;
+  }
+
+  .sidebar-header h3 {
+    font-size: 14px;
+  }
+
+  .sidebar-item span,
+  .notification-item span,
+  .settings-item span,
+  .sidebar-profile span {
+    font-size: 11px;
+  }
+
+  .sidebar-item {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .sidebar-middle {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 65px;
+  }
+
+  .sidebar-header h3,
+  .sidebar-item span,
+  .notification-item span,
+  .settings-item span,
+  .sidebar-profile span {
+    display: none;
+  }
+
+  .sidebar-header {
+    justify-content: center;
+  }
+
+  .sidebar-item {
+    justify-content: center;
+    padding: 8px 0;
+  }
+
+  .notification-item,
+  .settings-item {
+    justify-content: center;
+  }
+
+  .sidebar-profile {
+    justify-content: center;
+  }
+
+  .sidebar-middle {
+    align-items: center;
+  }
+
+  .sidebar-actions {
+    align-items: center;
+  }
+
+  .sidebar-img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .main-contair {
+    width: calc(100% - 65px);
+  }
+}
+
+@media (max-width: 500px) {
+  .sidebar {
+    width: 55px;
+  }
+
+  .main-contair {
+    width: calc(100% - 55px);
+  }
+
+  .sidebar-icons {
+    width: 22px;
+  }
+
+  .navbar {
+    padding: 5px 8px;
+  }
+
+  .nav-right {
+    gap: 8px;
+  }
+
+  .arama {
+    padding: 4px 6px;
+  }
+}
